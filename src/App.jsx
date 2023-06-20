@@ -635,10 +635,148 @@ function App() {
         the following command into your terminal:
         <code> npm install –-save react-router-dom</code>
       </p>
+      <h1> Interview Questions</h1>
+      <h2>What are the three main phases of a React component’s lifecycle?</h2>
+      <p>
+        They are: The initial rendering phase, when the component is about to
+        modify the DOM of the web page. The updating phase after the component
+        is added to the DOM and only updates when its state or props change. The
+        unmounting phase, when the component is destroyed and removed from the
+        DOM.
+      </p>
+      <h2>What are synthetic events in React?</h2>
+      <p>
+        React wraps the native events of the browser with its own event
+        structure for cross-browser compatibility. It has the same API as the
+        browser’s events but acts the same in every browser.
+      </p>
+      <h2>Where is using a key prop necessary, and why?</h2>
+      <p>
+        Key props are required when you create an array of elements. React uses
+        this key to identify specific elements in the array when they’re
+        updated, removed, or added.
+      </p>
+      <h2>What are Higher-Order Components (HOC)?</h2>
+      <p>
+        {" "}
+        Higher-Order Components are custom components that wrap other components
+        within them. They can dynamically accept one or more components as
+        children without modifying or copying any of the children’s behavior.
+        They allow for code reuse and state abstraction and manipulation.
+      </p>
+      <h2>What are pure components?</h2>
+      <p>
+        Pure components in React don’t re-render when props or states update to
+        the same value. You can extend the React.PureComponent class to use
+        them. The rendering is restricted in this way for higher performance and
+        is often used for components that are mainly for display.
+      </p>
 
+      <h1>Map, ForEach, Filter and Reduce</h1>
+      <p>
+        The most commonly asked questions (generally at the start of the
+        interviews) are about array methods. The interviewer wants to asses how
+        comfortable you are with array manipulation.
+      </p>
+
+      <h2>The .map() method</h2>
+      <p>
+        The .map() methods iterates over an array, computes whatever logic you
+        write inside the map body, and returns a NEW array.
+      </p>
+      <pre>
+        <code>
+          {`
+            let arr = [
+              { id: 1, age: 12, name: 'Manu' },
+              { id: 2, age: 24, name: 'Quincy' },
+              { id: 3, age: 22, name: 'Abbey' },
+            ]
+
+            let names = arr.map((el) => el.name)
+            console.log(names)
+            // Output: [ 'Manu', 'Quincy', 'Abbey' ]
+            `}
+        </code>
+      </pre>
+      <h2>The forEach() method</h2>
+      <p>
+        The .forEach() method ForEach is similar to .map() but it DOES NOT
+        return an array.
+      </p>
+      <pre>
+        <code>
+          {`            
+            let arr = [
+              { id: 1, age: 12, name: 'Manu' },
+              { id: 2, age: 24, name: 'Quincy' },
+              { id: 3, age: 22, name: 'Abbey' },
+            ]
+            arr.forEach((el) => el.age+= 10);
+            console.log(arr);
+
+            // Output: 22 32 44`}
+        </code>
+      </pre>
+
+      <h2>The .filter() method</h2>
+      <p>
+        The filter method, as the name suggests, helps in filtering out the
+        values inside of an array based on a Boolean condition. If the boolean
+        condition is true, the result will be returned and added in the final
+        array. If not, it will be skipped. Filter also returns an array, just
+        like the .map() method.
+      </p>
+
+      <pre>
+        <code>
+          {`
+let arr = [
+  { id: 1, age: 12, name: 'Manu' },
+  { id: 2, age: 24, name: 'Quincy' },
+  { id: 3, age: 22, name: 'Abbey' },
+]
+
+let tooYoung = arr.filter((el) => el.age <= 14);
+console.log(tooYoung);
+
+// Output: [ { id: 1, age: 12, name: 'Manu' } ]
+`}
+        </code>
+      </pre>
+      <h2>The reduce() method</h2>
+      <p>
+        In simple terms, the .reduce() method takes into account a previous
+        value , current value and an accumulator. The return type of the
+        .reduce() method is always a single value. It is useful when you want to
+        process all the values of the array and want to derive some accumulated
+        result.
+      </p>
+      <pre>
+        <code>
+          {`
+// Calculates the total age of all the three persons.
+let arr = [
+  { id: 1, age: 12, name: 'Manu' },
+  { id: 2, age: 24, name: 'Quincy' },
+  { id: 3, age: 22, name: 'Abbey' },
+]
+
+let totalAge = arr.reduce((acc, currentObj) => acc + currentObj.age, 0)
+console.log(totalAge)
+
+// Output: 57
+Here, the currentObj is the object that is being iterated over. Also, the acc value stores the result and is outputted finally into the totalAge array.
+`}
+        </code>
+      </pre>
       <h2>References</h2>
       <a href="https://www.freecodecamp.org/news/react-interview-questions-and-answers/">
-        Link
+        Link 1
+      </a>
+      <br />
+      <a href="https://www.freecodecamp.org/news/react-interview-questions-and-answers/">
+        Link 2
       </a>
     </>
   );
