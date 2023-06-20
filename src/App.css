@@ -3,3 +3,16 @@
   margin: 0 auto;
   padding: 5rem;
 }
+.header {
+  display: flex;
+  align-items: center;
+}
+.title {
+  margin-right: 10px;
+}
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}

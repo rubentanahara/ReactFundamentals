@@ -1,9 +1,14 @@
 import "./App.css";
-
+import reactLogo from "./assets/react.svg";
 function App() {
   return (
     <>
-      <h1>Learn React</h1>
+      <div className="header">
+        <h1 className="title">Learn React</h1>
+        <a href="https://react.dev" target="_blank">
+          <img className="logo" src={reactLogo} alt="React logo" />
+        </a>
+      </div>
       <h2>What is React?</h2>
       <p>
         React is an Open source front end javascript library to create user
@@ -580,7 +585,6 @@ function App() {
         <pre>
           <code>
             {`
-
     import React, { createContext, useContext } from 'react';
 
     // Create a context
